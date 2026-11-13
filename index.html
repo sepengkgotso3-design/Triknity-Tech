@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Triknity Tech – Websites that bring your business to life</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b1a;--surf:#0f1630;--surf2:#141d40;--line:#222f5a;--tx:#eef2ff;--mut:#9aa6cc;--teal:#2dd4bf;--blue:#4f7cff;--amber:#fbbf24;--ink:#04121a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--tx);overflow-x:hidden}
+h1,h2,h3,.logo{font-family:Sora,"DM Sans",system-ui,sans-serif;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,11,26,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px}.logo b{color:var(--teal);font-weight:800}
+.logo svg{animation:spin 26s linear infinite}.logo:hover svg{animation-duration:3s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.links{display:flex;align-items:center;gap:22px;color:var(--mut)}.links a:hover{color:var(--tx)}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;padding:12px 22px;border-radius:12px;color:var(--ink);background:var(--teal);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,212,191,.3)}
+.btn.ghost{background:transparent;color:var(--tx);border:1px solid var(--line)}.btn.ghost:hover{border-color:var(--teal);box-shadow:none}
+.hero{position:relative;padding:70px 0 40px;overflow:hidden}
+#net{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(34px,5.4vw,58px);line-height:1.06;margin:0 0 18px;font-weight:800}
+.hero p{color:var(--mut);font-size:18px;max-width:480px;margin:0 0 28px}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap}
+.art{width:100%;height:auto;overflow:visible}
+.art .b{animation:pop .7s cubic-bezier(.2,.8,.2,1) var(--d,0s) both;transform-box:fill-box;transform-origin:left center}
+.art .bar{transform-box:fill-box;transform-origin:bottom;animation:grow .9s ease var(--d,0s) both,pulse 4s ease-in-out calc(var(--d,0s) + 1.5s) infinite}
+.art .win{animation:pop .8s ease both;transform-box:fill-box;transform-origin:center}
+.art .fl{animation:bob 5s ease-in-out infinite}.art .fl2{animation:bob 6s ease-in-out -2s infinite}
+.art .cur{animation:cur 9s ease-in-out 3.2s infinite;opacity:0}
+.art .tst{animation:tst 9s ease-in-out 3.2s infinite;opacity:0}
+.art .cta{animation:press 9s ease-in-out 3.2s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pop{from{opacity:0;transform:scale(.6)}}
+@keyframes grow{from{transform:scaleY(0)}}
+@keyframes pulse{50%{transform:scaleY(.8)}}
+@keyframes bob{50%{transform:translateY(-10px)}}
+@keyframes cur{0%,28%{transform:translate(400px,340px);opacity:0}36%{opacity:1}54%,70%{transform:translate(98px,238px);opacity:1}86%{transform:translate(98px,238px);opacity:1}100%{transform:translate(98px,238px);opacity:0}}
+@keyframes press{0%,57%,67%,100%{transform:scale(1)}62%{transform:scale(.92)}}
+@keyframes tst{0%,62%{opacity:0;transform:translateY(12px)}70%,90%{opacity:1;transform:none}100%{opacity:0}}
+section{padding:64px 0}
+h2{font-size:clamp(26px,3.6vw,36px);margin:0 0 8px}.sub{color:var(--mut);margin:0 0 30px;max-width:560px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.plan{background:var(--surf);border:1px solid var(--line);border-radius:18px;padding:22px;cursor:pointer;transition:border-color .2s,transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.plan:hover{transform:translateY(-4px);border-color:#38498a}
+.plan.sel{border-color:var(--teal);box-shadow:0 0 0 1px var(--teal),0 14px 40px rgba(45,212,191,.15)}
+.ic{width:56px;height:56px;border-radius:14px;background:var(--surf2);display:grid;place-items:center;margin-bottom:16px;color:var(--teal)}
+.ic svg{width:32px;height:32px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.plan:nth-child(3n+2) .ic{color:var(--blue)}.plan:nth-child(3n) .ic{color:var(--amber)}
+.plan.sel .ic svg *,.sum.pulse .ic svg *{animation:draw .9s ease both}
+@keyframes draw{from{stroke-dasharray:1;stroke-dashoffset:1}to{stroke-dasharray:1;stroke-dashoffset:0}}
+.plan h3{margin:0 0 4px;font-size:18px}.plan p{color:var(--mut);margin:0 0 16px;font-size:15px;flex:1}
+.price{font-family:Sora,sans-serif;font-size:21px;font-weight:700}
+.plan small{margin-top:6px;color:var(--mut)}.plan.sel small{color:var(--teal)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+.track{position:absolute;top:21px;left:12%;right:12%;height:2px;background:var(--line)}
+.track i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--blue));transform:scaleX(0);transform-origin:left}
+.steps.in .track i{transform:scaleX(1);transition:transform 1.6s ease}
+.step{position:relative;text-align:center;opacity:0}
+.steps.in .step{animation:pop .6s ease both;opacity:1}
+.steps.in .step:nth-child(2){animation-delay:.1s}.steps.in .step:nth-child(3){animation-delay:.5s}.steps.in .step:nth-child(4){animation-delay:.9s}.steps.in .step:nth-child(5){animation-delay:1.3s}
+.dot{width:44px;height:44px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:var(--bg);border:2px solid var(--teal);font-family:Sora,sans-serif;font-weight:700;color:var(--teal)}
+.step h3{font-size:17px;margin:0 0 4px}.step p{color:var(--mut);margin:0;font-size:15px}
+.ord{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:start}
+form.card,.sum{background:var(--surf);border:1px solid var(--line);border-radius:18px;padding:26px}
+label{display:block;font-size:14px;color:var(--mut);margin:14px 0 6px}label:first-child{margin-top:0}
+input,select,textarea{width:100%;padding:13px;border-radius:12px;border:1px solid var(--line);background:#0a1024;color:var(--tx);font:inherit;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--teal)}
+textarea{min-height:110px;resize:vertical}
+.row2{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.sum{position:sticky;top:90px;text-align:center}
+.sum .ic{width:84px;height:84px;margin:0 auto 14px;border-radius:22px}.sum .ic svg{width:46px;height:46px}
+.sum h3{margin:0 0 6px;font-size:18px}.sum .big{font-family:Sora,sans-serif;font-size:26px;font-weight:800;color:var(--teal)}
+.sum p{color:var(--mut);font-size:14px;margin:10px 0 0}
+.ov{position:fixed;inset:0;background:rgba(3,6,16,.72);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+.ov.on{display:flex;animation:fade .25s ease}.ov.on .modal{animation:mod .4s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes fade{from{opacity:0}}@keyframes mod{from{opacity:0;transform:translateY(24px) scale(.94)}}
+.modal{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:28px;max-width:420px;width:100%;position:relative;overflow:hidden}
+.modal h3{margin:0 0 6px;font-size:22px}.modal p{color:var(--mut);margin:0 0 4px}
+.x{position:absolute;top:10px;right:14px;background:none;border:0;color:var(--mut);font-size:26px;cursor:pointer}
+.later{background:none;border:0;color:var(--mut);cursor:pointer;margin-top:12px;font:inherit;text-decoration:underline;width:100%}
+#toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,30px);opacity:0;pointer-events:none;background:var(--teal);color:var(--ink);font-weight:700;padding:13px 20px;border-radius:12px;z-index:60;transition:.35s}
+#toast.on{transform:translate(-50%,0);opacity:1}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);text-align:center;font-size:14px}
+@media(max-width:860px){.hero .wrap,.ord{grid-template-columns:1fr}.links a:not(.btn){display:none}.steps{grid-template-columns:1fr 1fr}.track{display:none}.sum{position:static}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.step{opacity:1}.art .cur,.art .tst{opacity:0}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="logo" href="#"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke-width="2"><circle cx="16" cy="11" r="8" stroke="#2dd4bf"/><circle cx="11" cy="20" r="8" stroke="#4f7cff"/><circle cx="21" cy="20" r="8" stroke="#fbbf24"/></svg>Triknity <b>Tech</b></a>
+<div class="links"><a href="#pricing">Packages</a><a href="#how">How it works</a><a class="btn" href="#order">Order a website</a></div>
+</div></nav>
+
+<header class="hero"><canvas id="net"></canvas><div class="wrap">
+<div>
+<h1>Websites that bring your business to life</h1>
+<p>From a single landing page to a full online store, we design and build sites that look sharp and help you win customers.</p>
+<div class="row"><a class="btn" href="#pricing">View packages</a><button class="btn ghost" id="openLead">Talk to us</button></div>
+</div>
+<svg class="art" viewBox="0 0 520 420" role="img" aria-label="A website being built, then an order arriving">
+<defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#4f7cff"/></linearGradient></defs>
+<g class="win"><rect x="30" y="40" width="440" height="330" rx="18" fill="#0f1630" stroke="#2c3b75"/>
+<circle cx="56" cy="64" r="5" fill="#fb7185"/><circle cx="74" cy="64" r="5" fill="#fbbf24"/><circle cx="92" cy="64" r="5" fill="#2dd4bf"/><rect x="120" y="55" width="210" height="18" rx="9" fill="#18224a"/></g>
+<rect class="b" style="--d:.5s" x="56" y="92" width="70" height="10" rx="5" fill="#2dd4bf"/>
+<g class="b" style="--d:.65s" fill="#2c3b75"><rect x="300" y="93" width="30" height="8" rx="4"/><rect x="342" y="93" width="30" height="8" rx="4"/><rect x="384" y="93" width="30" height="8" rx="4"/></g>
+<rect class="b" style="--d:.9s" x="56" y="128" width="200" height="16" rx="8" fill="#eef2ff"/>
+<rect class="b" style="--d:1.05s" x="56" y="152" width="150" height="16" rx="8" fill="#eef2ff"/>
+<rect class="b" style="--d:1.2s" x="56" y="182" width="226" height="8" rx="4" fill="#3a4a85"/>
+<rect class="b" style="--d:1.3s" x="56" y="198" width="180" height="8" rx="4" fill="#3a4a85"/>
+<rect class="b cta" style="--d:1.5s" x="56" y="222" width="84" height="28" rx="14" fill="#2dd4bf"/>
+<g class="b" style="--d:1.2s"><rect x="296" y="122" width="144" height="128" rx="14" fill="url(#g1)"/><circle cx="414" cy="150" r="13" fill="#fbbf24"/><path d="M296 250l44-58 28 34 26-40 46 64z" fill="#0f1630" opacity=".35"/></g>
+<rect class="b" style="--d:1.7s" x="56" y="272" width="118" height="76" rx="12" fill="#141d40" stroke="#2c3b75"/>
+<rect class="b" style="--d:1.85s" x="186" y="272" width="118" height="76" rx="12" fill="#141d40" stroke="#2c3b75"/>
+<rect class="b" style="--d:2s" x="316" y="272" width="124" height="76" rx="12" fill="#141d40" stroke="#2c3b75"/>
+<g class="b" style="--d:2.2s"><circle cx="76" cy="294" r="8" fill="#4f7cff"/><rect x="70" y="314" width="80" height="7" rx="3.5" fill="#3a4a85"/><rect x="70" y="328" width="52" height="7" rx="3.5" fill="#3a4a85"/><circle cx="206" cy="294" r="8" fill="#fbbf24"/><rect x="200" y="314" width="80" height="7" rx="3.5" fill="#3a4a85"/><rect x="200" y="328" width="52" height="7" rx="3.5" fill="#3a4a85"/></g>
+<g fill="#2dd4bf"><rect class="bar" style="--d:2.4s" x="334" y="318" width="16" height="20" rx="3"/><rect class="bar" style="--d:2.5s" x="358" y="304" width="16" height="34" rx="3"/><rect class="bar" style="--d:2.6s" x="382" y="312" width="16" height="26" rx="3" fill="#4f7cff"/><rect class="bar" style="--d:2.7s" x="406" y="290" width="16" height="48" rx="3" fill="#fbbf24"/></g>
+<g class="fl"><circle cx="38" cy="330" r="26" fill="#18224a" stroke="#2dd4bf"/><path d="M26 320h5l4 16h12l3-11H32" fill="none" stroke="#2dd4bf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="37" cy="342" r="2" fill="#2dd4bf"/><circle cx="46" cy="342" r="2" fill="#2dd4bf"/></g>
+<g class="fl2"><rect x="400" y="378" width="104" height="32" rx="16" fill="#18224a" stroke="#fbbf24"/><circle cx="420" cy="394" r="6" fill="#fbbf24"/><text x="432" y="399" font-size="13" fill="#eef2ff" font-family="DM Sans,sans-serif">New lead</text></g>
+<g class="tst"><rect x="290" y="6" width="180" height="36" rx="18" fill="#2dd4bf"/><path d="M308 24l5 5 9-10" fill="none" stroke="#04121a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><text x="330" y="29" font-size="14" font-weight="700" fill="#04121a" font-family="DM Sans,sans-serif">Order received</text></g>
+<g class="cur"><path d="M0 0v18l5-4 4 8 3-1.5-4-8h7z" fill="#fff" stroke="#070b1a" stroke-width="1.2"/></g>
+</svg>
+</div></header>
+
+<section id="pricing"><div class="wrap">
+<h2>Choose your website</h2><p class="sub">Pick a package to start your order. All prices are in South African Rand.</p>
+<div class="grid" id="plans"></div>
+</div></section>
+
+<section id="how"><div class="wrap">
+<h2>How it works</h2><p class="sub">Four simple steps from idea to a live website.</p>
+<div class="steps" id="steps"><div class="track"><i></i></div>
+<div class="step"><div class="dot">1</div><h3>Pick a package</h3><p>Choose the type of website that fits your business.</p></div>
+<div class="step"><div class="dot">2</div><h3>Share your details</h3><p>Tell us about your business and what you need.</p></div>
+<div class="step"><div class="dot">3</div><h3>We design and build</h3><p>We create your site and share it with you for feedback.</p></div>
+<div class="step"><div class="dot">4</div><h3>Go live</h3><p>Your website launches and starts working for you.</p></div>
+</div></div></section>
+
+<section id="order"><div class="wrap">
+<h2>Order your website</h2><p class="sub">Fill in what you can now, or save it and finish later.</p>
+<div class="ord">
+<form class="card" id="orderForm">
+<label for="type">Type of website</label><select id="type"></select>
+<label for="biz">Business name</label><input id="biz" placeholder="e.g. Sepeng Plumbing">
+<label for="details">Tell us about your project</label><textarea id="details" placeholder="Pages you need, colours, features, deadline…"></textarea>
+<div class="row2"><button class="btn" type="submit">Submit order</button><button class="btn ghost" type="button" id="saveLater">Save and finish later</button></div>
+</form>
+<aside class="sum" id="sum"><div class="ic" id="sumIcon"></div><h3 id="sumName">Select a website type</h3>
+<div class="big"><span id="pMin">R0</span> – <span id="pMax">R0</span><span id="pPlus"></span></div>
+<p>Estimated price. We confirm your final quote after reviewing your project.</p></aside>
+</div></div></section>
+
+<footer>© <span id="yr"></span> Triknity Tech. All rights reserved.</footer>
+
+<div class="ov" id="leadOv"><div class="modal">
+<button class="x" id="closeLead" aria-label="Close">×</button>
+<h3>Let’s stay in touch</h3>
+<p>Leave your details and we’ll reach out. You can finish your website order whenever you’re ready.</p>
+<form id="leadForm">
+<label for="ln">Full name</label><input id="ln" required>
+<label for="le">Email</label><input id="le" type="email" required>
+<label for="lp">Phone or WhatsApp (optional)</label><input id="lp" type="tel">
+<div class="row2"><button class="btn" style="width:100%" type="submit">Save my details</button></div>
+<button class="later" type="button" id="skipLead">I’ll fill in the rest later</button>
+</form></div></div>
+<div id="toast" role="status"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+/* ===== PASTE YOUR SUPABASE DETAILS HERE (Project Settings → API) ===== */
+const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+/* ===================================================================== */
+
+const MARKUP = 1.2; // base price + 20%
+const ICONS = {
+ 'one-page':'<rect x="7" y="6" width="34" height="36" rx="5"/><path d="M14 16h20M14 24h20M14 32h11"/>',
+ 'small-business':'<rect x="5" y="14" width="26" height="28" rx="4"/><rect x="17" y="6" width="26" height="28" rx="4"/>',
+ 'professional':'<rect x="6" y="7" width="17" height="15" rx="3"/><rect x="25" y="7" width="17" height="15" rx="3"/><rect x="6" y="26" width="36" height="15" rx="3"/>',
+ 'corporate':'<path d="M8 42V14l14-7v35M22 20l18 6v16M4 42h40M13 20h4M13 27h4M13 34h4"/>',
+ 'ecommerce':'<path d="M5 9h7l5 23h21l4-17H14"/><circle cx="20" cy="39" r="3"/><circle cx="35" cy="39" r="3"/>',
+ 'custom':'<path d="M18 14L6 24l12 10M30 14l12 10-12 10M27 9l-6 30"/>'
+};
+const icon = id => '<svg viewBox="0 0 48 48">' + ICONS[id].replace(/<(path|rect|circle)/g,'<$1 pathLength="1"') + '</svg>';
+const PLANS = [
+ {id:'one-page',name:'Basic 1-page website',desc:'A clean single page to get you online fast.',min:2000,max:4000},
+ {id:'small-business',name:'Small business website (3–5 pages)',desc:'Home, about, services and contact pages.',min:5000,max:10000},
+ {id:'professional',name:'Professional business website (5–10 pages)',desc:'A fuller site for established businesses.',min:10000,max:20000},
+ {id:'corporate',name:'Corporate website',desc:'A large, polished site for companies and brands.',min:20000,max:40000},
+ {id:'ecommerce',name:'E-commerce website (online store)',desc:'Sell your products online with a complete store.',min:7500,max:20000},
+ {id:'custom',name:'Advanced custom website',desc:'Bespoke features, systems and integrations.',min:40000,max:100000,plus:true}
+];
+const R = n => 'R' + Math.round(n).toLocaleString('en-ZA');
+const range = p => R(p.min*MARKUP) + ' – ' + R(p.max*MARKUP) + (p.plus?'+':'');
+const $ = id => document.getElementById(id);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let sb = null;
+try { if (!SUPABASE_URL.startsWith('YOUR_')) sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY); } catch(e){ console.error(e); }
+let tt; const toast = m => { const t=$('toast'); t.textContent=m; t.classList.add('on'); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('on'),3500); };
+const store = {get:k=>{try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}, set:(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}, del:k=>{try{localStorage.removeItem(k)}catch(e){}}};
+async function save(table,row){
+  if(!sb){ console.warn('Supabase not configured – demo mode. Row:',table,row); return; }
+  const {error} = await sb.from(table).insert(row);
+  if(error) throw error;
+}
+
+/* Packages */
+$('plans').innerHTML = PLANS.map(p=>`<div class="plan" tabindex="0" role="button" data-id="${p.id}"><div class="ic">${icon(p.id)}</div><h3>${p.name}</h3><p>${p.desc}</p><div class="price">${range(p)}</div><small>Select this package</small></div>`).join('');
+$('type').innerHTML = '<option value="">Select a website type…</option>' + PLANS.map(p=>`<option value="${p.id}">${p.name} — ${range(p)}</option>`).join('');
+function countTo(el,to){
+  const from=+el.dataset.v||0; el.dataset.v=to;
+  if(reduce){el.textContent=R(to);return}
+  const t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/650),e=1-Math.pow(1-k,3);el.textContent=R(from+(to-from)*e);if(k<1)requestAnimationFrame(f)})(t0);
+}
+function update(){
+  const p = PLANS.find(x=>x.id===$('type').value);
+  document.querySelectorAll('.plan').forEach(el=>el.classList.toggle('sel',!!p&&el.dataset.id===p.id));
+  $('sumName').textContent = p ? p.name : 'Select a website type';
+  $('sumIcon').innerHTML = p ? icon(p.id) : '';
+  $('pPlus').textContent = p&&p.plus ? '+' : '';
+  countTo($('pMin'), p ? p.min*MARKUP : 0); countTo($('pMax'), p ? p.max*MARKUP : 0);
+  const s=$('sum'); s.classList.remove('pulse'); void s.offsetWidth; if(p) s.classList.add('pulse');
+}
+$('type').onchange = update;
+const pick = c => { $('type').value=c.dataset.id; update(); $('order').scrollIntoView(); };
+$('plans').onclick = e => { const c=e.target.closest('.plan'); if(c) pick(c); };
+$('plans').onkeydown = e => { if(e.key==='Enter'||e.key===' '){ const c=e.target.closest('.plan'); if(c){e.preventDefault();pick(c);} } };
+
+/* Restore saved draft */
+const draft = store.get('tk_draft');
+if(draft){ $('type').value=draft.type||''; $('biz').value=draft.biz||''; $('details').value=draft.details||''; }
+update();
+
+/* Lead pop-up */
+const openLead = () => $('leadOv').classList.add('on');
+const closeLead = () => { $('leadOv').classList.remove('on'); try{sessionStorage.setItem('tk_dismiss','1')}catch(e){} };
+$('openLead').onclick = openLead; $('closeLead').onclick = closeLead; $('skipLead').onclick = closeLead;
+$('leadOv').onclick = e => { if(e.target.id==='leadOv') closeLead(); };
+addEventListener('keydown', e => { if(e.key==='Escape') closeLead(); });
+setTimeout(()=>{ let d=false; try{d=sessionStorage.getItem('tk_dismiss')}catch(e){} if(!store.get('tk_lead') && !d) openLead(); }, 6000);
+$('leadForm').onsubmit = async e => {
+  e.preventDefault();
+  const lead = {id:crypto.randomUUID(), name:$('ln').value.trim(), email:$('le').value.trim(), phone:$('lp').value.trim()||null};
+  try { await save('leads', lead); store.set('tk_lead', lead.id); closeLead(); toast('Thanks! Your details are saved.'); e.target.reset(); }
+  catch(err){ console.error(err); toast('Could not save your details. Check your connection and try again.'); }
+};
+
+/* Orders */
+async function sendOrder(status){
+  const lead = store.get('tk_lead');
+  if(!lead){ toast('Add your contact details first.'); openLead(); return; }
+  const p = PLANS.find(x=>x.id===$('type').value);
+  if(status==='submitted' && !p){ toast('Choose a website type to submit your order.'); return; }
+  const row = {lead_id:lead, website_type:p?p.name:null, price_min:p?Math.round(p.min*MARKUP):null, price_max:p?Math.round(p.max*MARKUP):null, business_name:$('biz').value.trim()||null, details:$('details').value.trim()||null, status};
+  try{
+    await save('orders', row);
+    if(status==='submitted'){ store.del('tk_draft'); $('orderForm').reset(); update(); toast('Order received. We’ll be in touch soon.'); }
+    else { store.set('tk_draft',{type:$('type').value,biz:$('biz').value,details:$('details').value}); toast('Draft saved. Come back any time to finish.'); }
+  }catch(err){ console.error(err); toast('Could not save your order. Check your connection and try again.'); }
+}
+$('orderForm').onsubmit = e => { e.preventDefault(); sendOrder('submitted'); };
+$('saveLater').onclick = () => sendOrder('draft');
+$('yr').textContent = new Date().getFullYear();
+
+/* Steps reveal (once) */
+new IntersectionObserver((en,o)=>en.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');o.disconnect()}}),{threshold:.35}).observe($('steps'));
+
+/* Hero network animation */
+(function(){
+  if(reduce) return;
+  const c=$('net'),x=c.getContext('2d');let w,h,P=[];
+  function rs(){w=c.width=c.offsetWidth;h=c.height=c.offsetHeight;P=Array.from({length:Math.round(w*h/16000)},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3}))}
+  rs();addEventListener('resize',rs);
+  (function d(){
+    x.clearRect(0,0,w,h);
+    for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;x.fillStyle='rgba(45,212,191,.7)';x.beginPath();x.arc(p.x,p.y,1.6,0,6.3);x.fill()}
+    for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const dx=P[i].x-P[j].x,dy=P[i].y-P[j].y,q=dx*dx+dy*dy;if(q<14000){x.strokeStyle='rgba(79,124,255,'+(.4*(1-q/14000))+')';x.beginPath();x.moveTo(P[i].x,P[i].y);x.lineTo(P[j].x,P[j].y);x.stroke()}}
+    requestAnimationFrame(d);
+  })();
+})();
+</script>
+</body>
+</html>
